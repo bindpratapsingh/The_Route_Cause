@@ -56,7 +56,7 @@ This data is then streamed via a FastAPI backend to a live React dashboard for v
 ```bash
 cd backend
 python -m venv venv
-source venv/bin/activate
+source venv/bin/activate (for MacOS) || venv\Scripts\activate (for Windows)
 pip install -r requirements.txt
 uvicorn main:app --reload
 python run_live_agent.py
