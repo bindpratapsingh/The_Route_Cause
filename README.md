@@ -47,12 +47,6 @@ AI needs oversight. A powerful Rule-Based Optimization Engine acts as a guardian
 
 ## Key Features & Innovations  
 
-- **Adaptive AI Control**: Dynamically allocates green lights based on live traffic density.  
-- **Emergency Vehicle Preemption**: Executes a professional-grade clearing sequence (yellow -> all-red -> dedicated green) for emergency vehicles.  
-- **Dynamic Queue Management**: Intelligently overrides the cycle to service excessively long queues and prevent gridlock.  
-- **Fairness Guarantee**: A "starvation" timer prevents any vehicle from waiting indefinitely.  
-- **Real-Time Data & Transparency**: All perceptions and decisions are streamed via WebSockets to a live dashboard for complete system transparency.
-
 | Innovation | Description & Impact |
 | :--- | :--- |
 | **Adaptive Signal Control** | Green light duration is allocated based on real-world demand, not a fixed clock. **Impact:** Drastically reduces average wait times and vehicle idling. |
