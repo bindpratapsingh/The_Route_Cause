@@ -6,9 +6,17 @@
 ---
 
 ## The Problem We Solve  
-Traditional traffic lights use static timers, leading to unnecessary congestion, long wait times, and an inability to respond to real-world events like emergency vehicles or sudden traffic jams.  
-Our system solves this by bringing intelligent, adaptive control to urban intersections.  
+Static, pre-programmed traffic signals are fundamentally inefficient. They cannot adapt to:
 
+- Sudden traffic surges during peak hours or events.
+
+- The urgent need of an ambulance or fire truck.
+
+- Uneven traffic flow, where one lane is congested while another is empty.
+
+- Pedestrian crossing needs.
+
+This leads to increased congestion, higher pollution, and lost productivity. Our solution tackles this problem head-on
 ---
 
 ## Our Multi-Layered AI Solution  
