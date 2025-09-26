@@ -17,7 +17,6 @@ Static, pre-programmed traffic signals are fundamentally inefficient. They canno
 - Pedestrian crossing needs.
 
 This leads to increased congestion, higher pollution, and lost productivity. Our solution tackles this problem head-on
-![Alt text for the image]()
 ---
 
 ## Our Intelligent 3-Tier Architecture
