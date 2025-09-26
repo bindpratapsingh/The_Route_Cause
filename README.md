@@ -1,6 +1,6 @@
 
-# 🚦 The Route Cause - AI-Powered Traffic Management System  
-**Submission for Smart India Hackathon 2025**  
+# 🚦 The Route Cause - AI-Powered Traffic Management System 
+### *"Intelligent Traffic Flow for a Smarter India"*
 
 
 ---
@@ -90,5 +90,5 @@ cd frontend
 npm install
 npm run dev
 ```
-
+![Alt text for the image](backend/lights.gif)
 ---
