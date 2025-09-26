@@ -19,19 +19,30 @@ Static, pre-programmed traffic signals are fundamentally inefficient. They canno
 This leads to increased congestion, higher pollution, and lost productivity. Our solution tackles this problem head-on
 ---
 
-## Our Multi-Layered AI Solution  
+## Our Intelligent 3-Tier Architecture
+We've engineered a multi-layered AI system where each component has a distinct and critical role, mimicking a human-like decision-making process.
 
-### Real-Time Perception (The Eyes)  
-A YOLOv8 computer vision model provides real-time situational awareness, detecting and counting every vehicle and pedestrian.  
+### Tier 1: The Perception Layer (The Eyes)  
+A state-of-the-art YOLOv8 Computer Vision model acts as our eyes on the street. It processes live video feeds to provide a constant stream of high-fidelity data:
 
-### Intelligent Decisions (The Brain)  
-A trained Q-Learning Reinforcement Learning agent analyzes the live data to make strategic decisions on signal timing to minimize congestion.  
+- Detects & Classifies: Accurately identifies cars, buses, trucks, motorcycles, and pedestrians.
 
-### Optimization & Safety (The Supervisor)  
-A rule-based Optimization Engine supervises the AI's decisions, enforcing critical safety and fairness rules like emergency overrides and starvation prevention.  
+- Counts & Tracks: Maintains a real-time count for each lane.
 
-This data is then streamed via a FastAPI backend to a live React dashboard for visualization.  
+- Calculates Density: Measures queue lengths to understand congestion levels.  
 
+### Tier 2: The Decision Layer (The Brain)  
+The raw data is fed to our Q-Learning Reinforcement Learning agent. This is the strategic brain of the operation. It has been trained over thousands of simulations to learn the optimal traffic signal strategy. Its single goal: minimize wait times and maximize traffic throughput. It constantly asks, "What's the most efficient signal phase to activate right now?"  
+
+### Tier 3: The Guardian Layer (The Supervisor)  
+AI needs oversight. A powerful Rule-Based Optimization Engine acts as a guardian, supervising the Q-Learning agent's decisions to ensure safety, fairness, and responsiveness to critical events. This layer enforces non-negotiable rules:
+
+- Emergency Vehicle Preemption: Detects emergency vehicles and initiates a high-priority override sequence to clear a path, saving precious seconds.
+
+- Gridlock Prevention: If a queue length exceeds a critical threshold, it triggers an override to service that lane immediately.
+
+- Starvation Prevention: A fairness timer ensures no vehicle waits indefinitely, guaranteeing a minimum level of service for all lanes. 
+  
 ---
 
 ## Key Features & Innovations  
@@ -40,7 +51,14 @@ This data is then streamed via a FastAPI backend to a live React dashboard for v
 - **Emergency Vehicle Preemption**: Executes a professional-grade clearing sequence (yellow -> all-red -> dedicated green) for emergency vehicles.  
 - **Dynamic Queue Management**: Intelligently overrides the cycle to service excessively long queues and prevent gridlock.  
 - **Fairness Guarantee**: A "starvation" timer prevents any vehicle from waiting indefinitely.  
-- **Real-Time Data & Transparency**: All perceptions and decisions are streamed via WebSockets to a live dashboard for complete system transparency.  
+- **Real-Time Data & Transparency**: All perceptions and decisions are streamed via WebSockets to a live dashboard for complete system transparency.
+
+| Innovation | Description & Impact |
+| :--- | :--- |
+| **Adaptive Signal Control** | Green light duration is allocated based on real-world demand, not a fixed clock. **Impact:** Drastically reduces average wait times and vehicle idling. |
+| **Emergency Preemption** | A professional-grade clearing sequence (`yellow` -> `all-red` -> `dedicated green`) provides a clear path for first responders. **Impact:** Saves lives by shortening emergency response times. |
+| **Live Digital Twin Dashboard** | A real-time React dashboard visualizes every detected vehicle, AI decision, and signal state. **Impact:** Provides complete transparency and operational oversight for city traffic managers. |
+| **Guaranteed Fairness** | Our “starvation” prevention algorithm ensures that low-traffic lanes aren’t ignored, promoting equitable flow. **Impact:** Increases driver satisfaction and prevents isolated congestion. |
 
 ---
 
