@@ -15,8 +15,6 @@ Static, pre-programmed traffic signals are fundamentally inefficient. They canno
 - Uneven traffic flow, where one lane is congested while another is empty.
 
 - Pedestrian crossing needs.
-
-This leads to increased congestion, higher pollution, and lost productivity. Our solution tackles this problem head-on
 ---
 
 ## Our Intelligent 3-Tier Architecture
