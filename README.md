@@ -39,7 +39,9 @@ AI needs oversight. A powerful Rule-Based Optimization Engine acts as a guardian
 
 - Gridlock Prevention: If a queue length exceeds a critical threshold, it triggers an override to service that lane immediately.
 
-- Starvation Prevention: A fairness timer ensures no vehicle waits indefinitely, guaranteeing a minimum level of service for all lanes. 
+- Starvation Prevention: A fairness timer ensures no vehicle waits indefinitely, guaranteeing a minimum level of service for all lanes.
+  
+![Alt text for the image](backend/flowchart.png)
   
 ---
 
