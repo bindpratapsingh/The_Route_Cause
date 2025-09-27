@@ -1,6 +1,6 @@
 
-# 🚦 The Route Cause - AI-Powered Traffic Management System  
-**Submission for Smart India Hackathon 2025**  
+# 🚦 The Route Cause - AI-Powered Traffic Management System 
+### *"Intelligent Traffic Flow for a Smarter India"*
 
 
 ---
@@ -15,6 +15,8 @@ Static, pre-programmed traffic signals are fundamentally inefficient. They canno
 - Uneven traffic flow, where one lane is congested while another is empty.
 
 - Pedestrian crossing needs.
+
+![Alt text for the image](frontend/public/Gemini_Generated_Image_d9vjzfd9vjzfd9vj.png)
 ---
 
 ## Our Intelligent 3-Tier Architecture
@@ -39,7 +41,9 @@ AI needs oversight. A powerful Rule-Based Optimization Engine acts as a guardian
 
 - Gridlock Prevention: If a queue length exceeds a critical threshold, it triggers an override to service that lane immediately.
 
-- Starvation Prevention: A fairness timer ensures no vehicle waits indefinitely, guaranteeing a minimum level of service for all lanes. 
+- Starvation Prevention: A fairness timer ensures no vehicle waits indefinitely, guaranteeing a minimum level of service for all lanes.
+  
+![Alt text for the image](backend/flowchart.png)
   
 ---
 
@@ -86,5 +90,5 @@ cd frontend
 npm install
 npm run dev
 ```
-
+![Alt text for the image](backend/lights.gif)
 ---
