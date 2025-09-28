@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import Problems from "@/components/Problems";
 import Header from "@/components/Header";
 import HeroText from "@/components/HeroText";
-import SplineScene from "@/components/SplineScene";
 import ScrollContent from "@/components/ScrollContent";
 import Footer from "@/components/Footer";
-import Between from "@/components/between";
+import Between from "@/components/Between";
 
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);

@@ -49,18 +49,22 @@ const Problems: React.FC = () => {
 
     // Set initial states
     gsap.set(car, { 
-      x: '-120%', // Start completely off screen 
+      x: '-120%',
       opacity: 0,
       scale: 0.8
     });
-    gsap.set('.problem-card', { x: 150, opacity: 0, scale: 0.9 });
+    gsap.set('.problem-card', { 
+      x: '60vw', // Start off-screen right
+      opacity: 0,
+      scale: 1
+    });
 
     // Create the main scroll trigger for the horizontal scroll
     const horizontalScroll = gsap.timeline({
       scrollTrigger: {
         trigger: container,
         start: 'top top',
-        end: '+=500%', // Extended scroll distance for smoother animation
+        end: '+=400%',
         pin: true,
         scrub: 1,
         anticipatePin: 1,
@@ -71,30 +75,52 @@ const Problems: React.FC = () => {
       }
     });
 
-    // Animate car entrance and full journey
+    // Car enters with first card (0% - 20% of timeline)
     horizontalScroll.to(car, {
       opacity: 1,
       scale: 1,
-      duration: 0.1
+      x: '20vw', // Car enters and stops at first position
+      duration: 0.2,
+      ease: 'power2.out'
     }, 0);
 
+    // First card appears with car entrance
+    horizontalScroll.to('.problem-card-0', {
+      x: 0,
+      opacity: 1,
+      duration: 0.2,
+      ease: 'power1.out'
+    }, 0);
+
+    // Car moves to second position (20% - 50% of timeline)
     horizontalScroll.to(car, {
-      x: '110vw', // Go well beyond the screen width
-      duration: 1,
-      ease: 'none'
-    }, 0);
+      x: '50vw',
+      duration: 0.3,
+      ease: 'power1.inOut'
+    }, 0.2);
 
-    // Animate cards appearing simultaneously with car movement
-    cardData.forEach((_, index) => {
-      const startTime = index * 0.2; // Start at the same time as car, stagger by 0.2s
-      horizontalScroll.to(`.problem-card-${index}`, {
-        x: 0,
-        opacity: 1,
-        scale: 1,
-        duration: 0.3,
-        ease: 'power2.out'
-      }, startTime);
-    });
+    // Second card appears as car reaches middle
+    horizontalScroll.to('.problem-card-1', {
+      x: 0,
+      opacity: 1,
+      duration: 0.25,
+      ease: 'power1.out'
+    }, 0.35);
+
+    // Third card appears early (by 65% of timeline instead of later)
+    horizontalScroll.to('.problem-card-2', {
+      x: 0,
+      opacity: 1,
+      duration: 0.2,
+      ease: 'power1.out'
+    }, 0.65);
+
+    // Car moves to final position and exits (85% - 100% of timeline)
+    horizontalScroll.to(car, {
+      x: '110vw', // Car exits screen
+      duration: 0.15,
+      ease: 'power2.in'
+    }, 0.85);
 
     // Cleanup function
     return () => {

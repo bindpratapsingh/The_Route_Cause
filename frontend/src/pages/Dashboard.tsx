@@ -49,14 +49,17 @@ const Dashboard = () => {
   // --- Helper to render a loading/disconnected state ---
   if (!isConnected || !data) {
     return (
-      <div className="flex h-screen items-center justify-center bg-background">
-          <div className="text-center">
-              <h1 className="font-hero text-2xl font-bold mb-4">
-                  {isConnected ? "Waiting for first update from AI..." : "Connecting to Traffic System..."}
-              </h1>
-              <p className="text-muted-foreground">Please ensure the backend server and AI agent are running.</p>
-          </div>
-      </div>
+      <>
+        <Header />
+        <div className="flex h-screen items-center justify-center bg-background">
+            <div className="text-center">
+                <h1 className="font-hero text-2xl font-bold mb-4">
+                    {isConnected ? "Waiting for first update from AI..." : "Connecting to Traffic System..."}
+                </h1>
+                <p className="text-muted-foreground">Please ensure the backend server and AI agent are running.</p>
+            </div>
+        </div>
+      </>
     );
   }
 

@@ -70,7 +70,18 @@ const EmergencyPage = () => {
   };
 
   if (!isConnected) {
-    return <div className="flex h-screen items-center justify-center">Connecting to AI Traffic System...</div>;
+    return (
+      <>
+        <Header />
+        <div className="flex h-screen items-center justify-center bg-background">
+            <div className="text-center">
+                <h1 className="font-hero text-2xl font-bold mb-4">
+                    {isConnected ? "Waiting for first update from AI..." : "Connecting to Emergency Systems..."}
+                </h1>
+            </div>
+        </div>
+      </>
+    );
   }
   
   // --- RENDER NORMAL OR EMERGENCY VIEW ---

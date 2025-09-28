@@ -92,17 +92,10 @@ const ScrollContent = () => {
           <p className="font-body text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
            Our AI traffic system is designed to stop this theft. By replacing blind, fixed timers with real-time perception and intelligent decision-making, we treat time as the valuable asset it is. Our system ensures every second of a green light is allocated efficiently based on actual traffic demand, returning that stolen value directly to a city's drivers, businesses, and its overall economy.
 
-
-
-
-
-
-
-
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="bg-gradient-primary hover:shadow-glow text-primary-foreground px-8 py-4 text-lg font-medium">
-              <a href="/Performance">performence Metric</a>
+              <a href="/Performance">Performence Metric</a>
             </Button>
             <Button variant="outline" className="px-8 py-4 text-lg font-medium border-primary text-primary hover:bg-primary/10">
               <a href="/emergency">Emergency Mode</a>

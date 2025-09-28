@@ -13,7 +13,7 @@ const Between = () => {
   const y = useTransform(scrollYProgress, [0, 1], [100, -100]);
 
   return (
-    <div ref={containerRef} className="relative min-h-screen py-20">
+    <div ref={containerRef} className="relative py-20">
       <motion.div 
         style={{ y }}
         className="container mx-auto px-6"
@@ -24,7 +24,7 @@ const Between = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="text-center mb-32"
+          className="text-center"
         >
           <h2 className="font-hero text-5xl md:text-7xl mb-8 bg-gradient-primary bg-clip-text text-transparent">
             We've All Been There
