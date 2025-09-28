@@ -105,7 +105,7 @@ const Problems: React.FC = () => {
       opacity: 1,
       duration: 0.25,
       ease: 'power1.out'
-    }, 0.35);
+    }, 0.3);
 
     // Third card appears early (by 65% of timeline instead of later)
     horizontalScroll.to('.problem-card-2', {
@@ -113,7 +113,7 @@ const Problems: React.FC = () => {
       opacity: 1,
       duration: 0.2,
       ease: 'power1.out'
-    }, 0.65);
+    }, 0.6);
 
     // Car moves to final position and exits (85% - 100% of timeline)
     horizontalScroll.to(car, {
