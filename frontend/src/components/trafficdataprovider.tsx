@@ -42,12 +42,6 @@ const TrafficDataContext = createContext<TrafficDataContextType | undefined>(und
 //const WEBSOCKET_URL = "ws://127.0.0.1:8000/ws/dashboard";
 const WEBSOCKET_URL = "wss://backend-production-039d.up.railway.app/ws/dashboard";
 
-//const socket = new WebSocket("wss://backend-production-039d.up.railway.app");
-//const WEBSOCKET_URL = "ws://backend-production-039d.up.railway.app/ws/dashboard";
-//const WEBSOCKET_URL = process.env.VITE_WEBSOCKET_URL || "backend-production-039d.up.railway.app";
-// --- Create the Provider Component ---
-// This component will wrap your entire application. It handles the actual
-// connection and provides the data to all children.
 export const TrafficDataProvider = ({ children }: { children: ReactNode }) => {
   const [data, setData] = useState<TrafficData | null>(null);
   const [isConnected, setIsConnected] = useState(false);
