@@ -57,6 +57,7 @@ const TrafficDataContext = createContext<TrafficDataContextType | undefined>(und
 //const WEBSOCKET_URL = "ws://127.0.0.1:8000/ws/dashboard";
 //const WEBSOCKET_URL = "wss://backend-production-039d.up.railway.app/ws/dashboard";
 // Latest : const WEBSOCKET_URL = "wss://backend-production-039d.up.railway.app/ws/ai";
+//const WEBSOCKET_URL = "wss://backend-production-039d.up.railway.app/ws/dashboard";
 const WEBSOCKET_URL = "wss://backend-production-039d.up.railway.app/ws/dashboard";
 
 export const TrafficDataProvider = ({ children }: { children: ReactNode }) => {
