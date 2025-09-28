@@ -41,7 +41,7 @@ const TrafficDataContext = createContext<TrafficDataContextType | undefined>(und
 // Define the WebSocket URL
 //const WEBSOCKET_URL = "ws://127.0.0.1:8000/ws/dashboard";
 //const socket = new WebSocket("wss://backend-production-039d.up.railway.app");
-const WEBSOCKET_URL = "ws://backend-production-039d.up.railway.app";
+const WEBSOCKET_URL = "ws://backend-production-039d.up.railway.app/ws/dashboard";
 //const WEBSOCKET_URL = process.env.VITE_WEBSOCKET_URL || "ws://localhost:8000/ws/dashboard";
 // --- Create the Provider Component ---
 // This component will wrap your entire application. It handles the actual
