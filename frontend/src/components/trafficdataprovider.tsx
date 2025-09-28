@@ -4,7 +4,7 @@ import React, { createContext, useContext, useState, useEffect, ReactNode } from
 
 // --- Define the shape of our data ---
 // This should exactly match the JSON payload from the Python backend
-interface MainDashboardData {
+/*interface MainDashboardData {
   signal_state: { [key: string]: any };
   vehicle_counters: { [key: string]: number };
   total_vehicles: number;
@@ -28,11 +28,26 @@ export interface TrafficData {
   performance_metrics: PerformanceMetric[];
   emergency_mode: EmergencyModeData | null;
 }
-
+*/
 // Define the shape of our Context
+//interface TrafficDataContextType {
+  //data: TrafficData | null;
+  //isConnected: boolean;
+//}
 interface TrafficDataContextType {
-  data: TrafficData | null;
+  data: BackendTrafficData | null;
   isConnected: boolean;
+}
+
+// --- Define the shape of our data ---
+// This matches what backend /status or WebSocket sends
+export interface BackendTrafficData {
+  current_phase: number;
+  last_update_time: number;
+  last_decision_reason: string;
+  lane_counts: { [key: string]: number };
+  pedestrian_count: number;
+  ai_status: string;
 }
 
 // --- Create the Context ---
@@ -44,7 +59,9 @@ const TrafficDataContext = createContext<TrafficDataContextType | undefined>(und
 const WEBSOCKET_URL = "wss://backend-production-039d.up.railway.app/ws/ai";
 
 export const TrafficDataProvider = ({ children }: { children: ReactNode }) => {
-  const [data, setData] = useState<TrafficData | null>(null);
+//  const [data, setData] = useState<TrafficData | null>(null);
+  const [data, setData] = useState<BackendTrafficData | null>(null);
+
   const [isConnected, setIsConnected] = useState(false);
 
   useEffect(() => {
