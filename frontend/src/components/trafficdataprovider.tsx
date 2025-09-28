@@ -70,7 +70,7 @@ export const TrafficDataProvider = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     const socket = new WebSocket(WEBSOCKET_URL);
 
-    socket.onopen = () => {
+   /* socket.onopen = () => {
       console.log("✅ WebSocket connection established.");
       setIsConnected(true);
     };
@@ -83,7 +83,22 @@ export const TrafficDataProvider = ({ children }: { children: ReactNode }) => {
         console.error("❌ Error parsing WebSocket message:", error);
       }
     };
+*/
+    socket.onmessage = (event) => {
+  try {
+    const receivedData = JSON.parse(event.data);
+    console.log("✅ Received data:", receivedData);  // Debug log
+    setData(receivedData);
+  } catch (error) {
+    console.error("❌ Error parsing data:", error);
+    console.log("Raw data:", event.data);
+  }
+};
 
+socket.onopen = () => {
+  console.log("✅ WebSocket connected to:", WEBSOCKET_URL);
+  setIsConnected(true);
+};
     socket.onclose = () => {
       console.log("🔌 WebSocket connection closed.");
       setIsConnected(false);
