@@ -69,17 +69,53 @@ const EmergencyPage = () => {
     total_vehicles: { label: "Total Vehicles", color: "hsl(var(--primary))" },
   };
 
-  if (!isConnected) {
+  if (!isConnected || !data) {
     return (
       <>
         <Header />
-        <div className="flex h-screen items-center justify-center bg-background">
-            <div className="text-center">
-                <h1 className="font-hero text-2xl font-bold mb-4">
-                    {isConnected ? "Waiting for first update from AI..." : "Connecting to Emergency Systems..."}
-                </h1>
+        <div className="flex h-screen items-center justify-center bg-background relative overflow-hidden">
+          {/* Animated background grid */}
+          <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]" />
+          
+          {/* Animated gradient orbs */}
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-red-500/20 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-500/20 rounded-full blur-3xl animate-pulse delay-700" />
+          
+          <div className="text-center z-10 space-y-8">
+            
+            
+            {/* Main heading with gradient */}
+            <h1 className="font-hero text-3xl font-bold mb-4 bg-gradient-to-r from-red-500 to-red-800 bg-clip-text text-transparent">
+              {isConnected ? "Initializing AI Traffic Analysis..." : "Connecting to Traffic System..."}
+            </h1>
+            
+            {/* Animated loading bar */}
+            <div className="w-64 h-2 bg-secondary rounded-full overflow-hidden mx-auto">
+              <div className="h-full bg-gradient-to-r from-red-500 to-red-800 animate-[loading_1.5s_ease-in-out_infinite]" />
             </div>
+            
+            {/* Status messages */}
+            <div className="space-y-2 text-muted-foreground">
+              <p className="flex items-center justify-center gap-2">
+                <span className="w-2 h-2 bg-red-500 rounded-full animate-ping" />
+                Establishing connection to backend server
+              </p>
+              <p className="text-sm opacity-70">
+                Ensure the backend server and AI agent are running
+              </p>
+            </div>
+            
+            {/* System status indicators */}
+            
+          </div>
         </div>
+        <style>{`
+          @keyframes loading {
+            0%, 100% { transform: translateX(-100%); }
+            50% { transform: translateX(400%); }
+          }
+          .delay-700 { animation-delay: 700ms; }
+        `}</style>
       </>
     );
   }
@@ -92,14 +128,17 @@ const EmergencyPage = () => {
         <Header />
         <main className="pt-24 pb-12">
           <div className="container mx-auto px-6 text-center">
+            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-red-500/20 rounded-full blur-3xl animate-pulse" />
+            <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-500/20 rounded-full blur-3xl animate-pulse delay-700" />
+          
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-              <h1 className="font-hero text-4xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
+              <h1 className="font-hero text-4xl font-bold mb-4 bg-gradient-to-r from-red-500 to-red-800 bg-clip-text text-transparent">
                 Normal Operations
               </h1>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
                 The emergency monitoring system is active. All traffic signals are currently operating under standard AI control.
               </p>
-               <div className="mt-8 text-6xl">✅</div>
+               <div className="mt-8 text-6xl">🚨</div>
             </motion.div>
           </div>
         </main>

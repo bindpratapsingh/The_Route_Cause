@@ -59,13 +59,50 @@ const PerformanceMetrics = () => {
     return (
       <>
         <Header />
-        <div className="flex h-screen items-center justify-center bg-background">
-            <div className="text-center">
-                <h1 className="font-hero text-2xl font-bold mb-4">
-                    {isConnected ? "Waiting for first update from AI..." : "Connecting to Traffic System..."}
-                </h1>
+        <div className="flex h-screen items-center justify-center bg-background relative overflow-hidden">
+          {/* Animated background grid */}
+          <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]" />
+          
+          {/* Animated gradient orbs */}
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-700" />
+          
+          <div className="text-center z-10 space-y-8">
+            {/* Animated traffic light loader */}
+            
+            
+            {/* Main heading with gradient */}
+            <h1 className="font-hero text-3xl font-bold mb-4 bg-gradient-to-r from-purple-500 to-blue-600 bg-clip-text text-transparent">
+              {isConnected ? "Initializing AI Traffic Analysis..." : "Connecting to Traffic System..."}
+            </h1>
+            
+            {/* Animated loading bar */}
+            <div className="w-64 h-2 bg-secondary rounded-full overflow-hidden mx-auto">
+              <div className="h-full bg-gradient-to-r from-purple-500 to-blue-500 animate-[loading_1.5s_ease-in-out_infinite]" />
             </div>
+            
+            {/* Status messages */}
+            <div className="space-y-2 text-muted-foreground">
+              <p className="flex items-center justify-center gap-2">
+                <span className="w-2 h-2 bg-green-500 rounded-full animate-ping" />
+                Establishing connection to backend server
+              </p>
+              <p className="text-sm opacity-70">
+                Ensure the backend server and AI agent are running
+              </p>
+            </div>
+            
+            {/* System status indicators */}
+            
+          </div>
         </div>
+        <style>{`
+          @keyframes loading {
+            0%, 100% { transform: translateX(-100%); }
+            50% { transform: translateX(400%); }
+          }
+          .delay-700 { animation-delay: 700ms; }
+        `}</style>
       </>
     );
   }
