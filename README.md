@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img width="150%" alt="The Route Cause - AI-Powered Traffic Management System" src="frontend/public/intro.png" />
+  <img width="150%" alt="The Route Cause - AI-Powered Traffic Management System" src="frontend/public/introduction.gif" />
 </p>
 
 ## The Problem We Solve  
