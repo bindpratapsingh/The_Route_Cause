@@ -1,5 +1,5 @@
 
-# 🚦The Route Cause - AI-Powered Traffic Management System 
+# 🚦The Route Cause - AI Powered Traffic Management System 
 ### *"Intelligent Traffic Flow for a Smarter India"*
 
 
@@ -23,28 +23,28 @@ _**"Our solution provides the blueprint for integrating with existing government
 ---
 
 ## Our Intelligent 3-Tier Architecture
-We've engineered a multi-layered AI system where each component has a distinct and critical role, mimicking a human-like decision-making process.
+We've engineered a **multi-layered AI system** where each component has a distinct and critical role, mimicking a human-like decision-making process.
 
 ### Tier 1: The Perception Layer (The Eyes)  
-A state-of-the-art YOLOv8 Computer Vision model acts as our eyes on the street. It processes live video feeds to provide a constant stream of high-fidelity data:
+A state-of-the-art **YOLOv8 Computer Vision model** acts as our eyes on the street. It processes live video feeds to provide a constant stream of high-fidelity data:
 
-- Detects & Classifies: Accurately identifies cars, buses, trucks, motorcycles, and pedestrians.
+- **Detects & Classifies**: Accurately identifies cars, buses, trucks, motorcycles, and pedestrians.
 
-- Counts & Tracks: Maintains a real-time count for each lane.
+- **Counts & Tracks**: Maintains a real-time count for each lane.
 
-- Calculates Density: Measures queue lengths to understand congestion levels.  
+- **Calculates Density**: Measures queue lengths to understand congestion levels.  
 
 ### Tier 2: The Decision Layer (The Brain)  
-The raw data is fed to our Q-Learning Reinforcement Learning agent. This is the strategic brain of the operation. It has been trained over thousands of simulations to learn the optimal traffic signal strategy. Its single goal: minimize wait times and maximize traffic throughput. It constantly asks, "What's the most efficient signal phase to activate right now?"  
+The raw data is fed to our **Q-Learning Reinforcement Learning** agent. This is the strategic brain of the operation. It has been trained over thousands of simulations to learn the optimal traffic signal strategy. Its single goal: minimize wait times and maximize traffic throughput. It constantly asks, *"What's the most efficient signal phase to activate right now?"*  
 
 ### Tier 3: The Guardian Layer (The Supervisor)  
 AI needs oversight. A powerful Rule-Based Optimization Engine acts as a guardian, supervising the Q-Learning agent's decisions to ensure safety, fairness, and responsiveness to critical events. This layer enforces non-negotiable rules:
 
-- Emergency Vehicle Preemption: Detects emergency vehicles and initiates a high-priority override sequence to clear a path, saving precious seconds.
+- **Emergency Vehicle Preemption**: Detects emergency vehicles and initiates a high-priority override sequence to clear a path, saving precious seconds.
 
-- Gridlock Prevention: If a queue length exceeds a critical threshold, it triggers an override to service that lane immediately.
+- **Gridlock Prevention**: If a queue length exceeds a critical threshold, it triggers an override to service that lane immediately.
 
-- Starvation Prevention: A fairness timer ensures no vehicle waits indefinitely, guaranteeing a minimum level of service for all lanes.
+- **Starvation Prevention**: A fairness timer ensures no vehicle waits indefinitely, guaranteeing a minimum level of service for all lanes.
   
 ![Alt text for the image](backend/flowchart.png)
   
