@@ -16,6 +16,9 @@ Static, pre-programmed traffic signals are fundamentally inefficient. They canno
 
 - Pedestrian crossing needs.
 
+_**"Our solution provides the blueprint for integrating with existing government camera infrastructure to deliver real-time, adaptive traffic management and instant responses to critical road events."**_
+
+
 ![Alt text for the image](frontend/public/Gemini_Generated_Image_d9vjzfd9vjzfd9vj.png)
 ---
 
