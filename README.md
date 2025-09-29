@@ -1,9 +1,7 @@
 
-# 🚦The Route Cause - AI Powered Traffic Management System 
-### *"Intelligent Traffic Flow for a Smarter India"*
-
-
----
+<p align="center">
+  <img width="150%" alt="The Route Cause - AI-Powered Traffic Management System" src="frontend/public/intro.png" />
+</p>
 
 ## The Problem We Solve  
 Static, pre-programmed traffic signals are fundamentally inefficient. They cannot adapt to:
