@@ -59,7 +59,7 @@ const TrafficDataContext = createContext<TrafficDataContextType | undefined>(und
 // Latest : const WEBSOCKET_URL = "wss://backend-production-039d.up.railway.app/ws/ai";
 //const WEBSOCKET_URL = "wss://backend-production-039d.up.railway.app/ws/dashboard";
 //const WEBSOCKET_URL = "wss://backend-production-039d.up.railway.app/ws/dashboard";
-const WEBSOCKET_URL = "wss://backend-production-99c5.up.railway.app/ws/dashboard";
+const WEBSOCKET_URL = "wss://uvicorn-main-production-c61e.up.railway.app/ws/dashboard";
 
 export const TrafficDataProvider = ({ children }: { children: ReactNode }) => {
 //  const [data, setData] = useState<TrafficData | null>(null);
